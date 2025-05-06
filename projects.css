@@ -1,0 +1,462 @@
+/* Projects Hero Section */
+.projects-hero-section {
+    background: linear-gradient(135deg, var(--deep-indigo) 0%, #1a1c2e 100%);
+    height: 50vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--soft-white);
+    padding-top: 80px;
+}
+
+.projects-hero-section h1 {
+    font-size: 4.8rem;
+    color: var(--soft-white);
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s forwards 0.3s;
+}
+
+.projects-hero-section .tagline {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s forwards 0.6s;
+}
+
+.hero-navigation {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s forwards 0.9s;
+}
+
+.hero-navigation .btn {
+    margin: 0 1rem;
+}
+
+/* Past Projects Section */
+.past-projects-section {
+    background-color: var(--soft-white);
+    padding: 8rem 0;
+}
+
+.filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 4rem;
+    gap: 1rem;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.6rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+}
+
+.filter-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.filter-btn.active {
+    background-color: var(--neon-blue);
+    color: white;
+    border-color: var(--neon-blue);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: all var(--transition-speed) ease;
+    position: relative;
+    height: 420px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-img {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img img {
+    transform: scale(1.05);
+}
+
+.project-category {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--neon-blue);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.project-info {
+    padding: 2rem;
+}
+
+.project-info h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--deep-indigo);
+}
+
+.project-info p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    color: #777;
+}
+
+.project-meta span {
+    display: flex;
+    align-items: center;
+}
+
+.project-meta i {
+    margin-right: 0.5rem;
+    color: var(--neon-blue);
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.project-tech span {
+    background-color: #f0f3f7;
+    padding: 0.4rem 1rem;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    color: var(--deep-indigo);
+}
+
+/* Hover Effect for Project Cards */
+.project-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(43, 45, 66, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    padding: 2rem;
+}
+
+.project-card:hover .project-hover {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hover-content {
+    text-align: center;
+    color: white;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .hover-content {
+    transform: translateY(0);
+}
+
+.hover-content h3 {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.hover-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.hover-content .btn {
+    background-color: var(--neon-blue);
+    color: white;
+    border: none;
+}
+
+.hover-content .btn:hover {
+    background-color: #009ad0;
+}
+
+/* Workflow Section */
+.workflow-section {
+    background-color: #f0f3f7;
+    padding: 8rem 0;
+}
+
+.workflow-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 5rem;
+}
+
+.workflow-steps {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.workflow-step {
+    display: flex;
+    margin-bottom: 8rem;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.workflow-step.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.workflow-step:last-child {
+    margin-bottom: 0;
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background-color: var(--neon-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.step-content {
+    margin-left: 3rem;
+    background-color: white;
+    border-radius: var(--card-border-radius);
+    padding: 2.5rem;
+    box-shadow: var(--box-shadow);
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 191, 255, 0.1);
+    color: var(--neon-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.step-content h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.step-content p {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+    color: #666;
+}
+
+.connector {
+    position: absolute;
+    left: 25px;
+    top: 50px;
+    width: 2px;
+    height: calc(100% + 8rem);
+    background-color: rgba(0, 191, 255, 0.3);
+    z-index: 0;
+}
+
+.workflow-step:last-child .connector {
+    display: none;
+}
+
+/* Animated workflow steps */
+#step1 { animation-delay: 0.2s; }
+#step2 { animation-delay: 0.4s; }
+#step3 { animation-delay: 0.6s; }
+#step4 { animation-delay: 0.8s; }
+#step5 { animation-delay: 1s; }
+#step6 { animation-delay: 1.2s; }
+
+/* Call to Action Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--neon-blue) 0%, #0077cc 100%);
+    color: white;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-size: 3.6rem;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.cta-content p {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.cta-content .btn {
+    background-color: white;
+    color: var(--neon-blue);
+    font-weight: 600;
+}
+
+.cta-content .btn:hover {
+    background-color: var(--deep-indigo);
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-hero-section h1 {
+        font-size: 3.6rem;
+    }
+    
+    .projects-hero-section .tagline {
+        font-size: 1.8rem;
+    }
+    
+    .filter-controls {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+        justify-content: flex-start;
+    }
+    
+    .filter-btn {
+        flex-shrink: 0;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    
+    .workflow-step {
+        flex-direction: column;
+    }
+    
+    .step-content {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+    
+    .connector {
+        left: 25px;
+        top: 50px;
+        height: calc(100% + 10rem);
+    }
+}
+
+@media (max-width: 576px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .projects-hero-section {
+        height: auto;
+        padding: 12rem 0 6rem;
+    }
+    
+    .hero-navigation .btn {
+        margin: 1rem;
+        display: block;
+        width: 100%;
+    }
+    
+    .filter-controls {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        margin-bottom: 3rem;
+    }
+    
+    .project-meta {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .step-content {
+        padding: 2rem;
+    }
+}
+
+/* Animation for workflow steps */
+@keyframes fadeInStep {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
