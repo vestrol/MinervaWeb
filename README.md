@@ -10,7 +10,6 @@ The website consists of the following pages and sections:
 - **Hero Section**: Animated introduction with a mission-focused tagline
 - **About Section**: Information about the Minerva Department
 - **Team Section**: Introduction to the department's manager and specialized mentors with flip-card animations
-- **Contact Section**: Contact form and information
 
 ### Projects Page (`projects.html`)
 - **Past Projects**: A filterable grid showcasing scholar projects across different technology domains
@@ -31,11 +30,9 @@ The website consists of the following pages and sections:
 - **Responsive Design**: The website is fully responsive across mobile, tablet, and desktop devices
 - **Animations**: Smooth scroll animations, hover effects, and micro-interactions
 - **Interactive Elements**:
-  - Flip cards for team members
   - Filterable project grid
   - Animated workflow visualization
   - Mobile-friendly navigation
-- **Form Handling**: Contact form and newsletter subscription functionality
 
 ## How to Use
 
